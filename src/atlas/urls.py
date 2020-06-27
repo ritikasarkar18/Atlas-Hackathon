@@ -15,11 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from Mainapp.views import forminput
+from Mainapp.views import forminput, home
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/',forminput),
+    path('',home),
+    path('Converter/',forminput),
 ]
 
 from . import settings
