@@ -21,7 +21,8 @@
 
                     <!-- Image of the Logo -->
                     <div class="p-5 bg-white shadow rounded-lg"><img src="/static/assets/img/atlas-hackathon.svg" alt="" width="200" class="d-block mx-auto mb-4">
-
+		<form method = "POST" enctype = "multipart/form-data">
+			{% csrf_token %}
                     <!-- Browser to open the file -->
                     <h6 class="text-center mb-2 text-muted">
                         Open the PDF you want to convert
@@ -107,11 +108,11 @@
 
                     <!-- Submit Button -->
                     <div class="columns download">
-                        <a href="assets/doc/file.pdf" class="button submit btn btn-primary btn-block rounded-pill shadow" target="_blank">
-                            <i class="fas fa-download mr-2"></i>Download PDF
+                        <!-- <a href="assets/doc/file.pdf" class="button submit btn btn-primary btn-block rounded-pill shadow" target="_blank"> -->
+				<input type="submit" ></input><i class="fas fa-download mr-2"></i>
                         </a>
                     </div>
-
+		</input>
 
                     </div>
                 </div>
