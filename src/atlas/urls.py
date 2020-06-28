@@ -19,7 +19,7 @@ from Mainapp.views import forminput, home
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',home),
+    path('',forminput),
     path('Converter/',forminput),
 ]
 
