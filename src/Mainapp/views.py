@@ -1,19 +1,23 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+import time
+from atlas import settings
 # from .forms import inputform as inputform1
 
-# Create your views here.
-def home(request):
-    return render(request,"index.html",{})
 def forminput(request):
     if request.method=='POST':
         dic = dict(request.POST)
         fl = request.FILES 
-        ML(int(dic['style'][0]), dic['color'][0], float(dic['slider'][0]),fl['pdf']) 
+        request.session['hello'] =[int(dic['style'][0]), dic['color'][0], float(dic['slider'][0])] 
+        settings.pdf_file = fl
+        return render(request, "loading.html", {'load' : True})
     return render(request,"index.html",{})
 
-def ML(style, color, thickness, fl):
-    print(style)
-    print(color)
-    print(thickness)
-    print(fl)
+def ML(request):
+    data = request.session.get('hello')
+    style = data[0]
+    color = data[1]
+    thickness = data[2]
+    fl = settings.pdf_file['pdf']
+    time.sleep(5)
+    return render(request, "loaded.html", {'Text' : "loaded"})

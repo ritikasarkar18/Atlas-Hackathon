@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>SomePage</title>
+	</head>
+	<body>
+		<div class= "overlay">
+		<div id="loading">
+		<img src = "/static/images/loading.gif"></img>
+		<hr>
+		<h2 id="loadingtext">Plz don't go back or reload...</h2>
+		</div>
+		</div>
+	</body>
+	{% if load %}
+	<script type="text/javascript" src = "/static/assets/js/jquery.js"></script>
+	<script>
+	 $(document).ready(function(){
+         $.ajax({
+            	url: '/Result/',
+            	data_type: 'html',
+            	success: function(data){
+			window.location.href = "/Result/";
+            	}
+       	 	});
+	    });
+	</script>
+	{% endif %}
+</html>
