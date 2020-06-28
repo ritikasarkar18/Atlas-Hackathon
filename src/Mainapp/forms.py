@@ -1,9 +1,9 @@
 from django import forms
 
-styles=(("Style 1","Style 1"),("Style 2","Style 2"),("Style 3","Style 3"),("Style 4","Style 4"),
-	("Style 5","Style 5"),("Style 6","Style 6"),("Style 7","Style 7"),("Style 8","Style 8"),("Style 9","Style 9"),
-	("Style 10","Style 10"))
-colors=(("Black","Black"),("Blue","Blue"),("Red","Red"),("Green","Green"))
+styles=(("1","1"),("2","2"),("3","3"),("4","4"),
+	("5","5"),("6","6"),("7","7"),("8","8"),("9","9"),
+	("10","10"))
+colors=(("1","Bk"),("2","Bl"),("3","Rd"),("4","Gr"))
 
 class inputform(forms.Form):
 	pdf = forms.FileField()
