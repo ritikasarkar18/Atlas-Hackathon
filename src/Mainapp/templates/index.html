@@ -28,7 +28,7 @@
                     </h6>
 
                     <div class="custom-file overflow-hidden rounded-pill mb-4">
-                        <input id="customFile" type="file" class="custom-file-input rounded-pill" name="pdf">
+                        <input id="customFile" type="file" accept=".pdf" class="custom-file-input rounded-pill" name="pdf">
                         <label for="customFile" class="custom-file-label rounded-pill">Choose file...</label>
                     </div>
                     
@@ -106,9 +106,12 @@
                     </div>
 
                     <!-- Submit Button -->
-                    <label for="fileSubmit" class="submit btn btn-primary btn-block rounded-pill shadow">
-                        <i class="fas fa-upload mr-2"></i>Generate PDF
-                    </label>
+                    <div class="columns download">
+                        <a href="assets/doc/file.pdf" class="button submit btn btn-primary btn-block rounded-pill shadow" target="_blank">
+                            <i class="fas fa-download mr-2"></i>Download PDF
+                        </a>
+                    </div>
+
 
                     </div>
                 </div>
